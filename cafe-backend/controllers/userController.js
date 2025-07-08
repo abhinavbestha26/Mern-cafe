@@ -13,7 +13,7 @@ const profile = async (req, res) => {
   }
 };
 const deleteUser = async (req, res) => {
-  try {
+  try { 
     const id = req.params.id;
     const result = await userModel.findByIdAndDelete(id);
     res.status(200).json(result);
