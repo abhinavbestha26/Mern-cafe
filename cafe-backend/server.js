@@ -12,7 +12,7 @@ const dbpass = encodeURIComponent(process.env.DBPASS)
 //     console.log("Server started");
 //   });  
 // });
-mongoose.connect(process.env.MONGODB_URL).then(() => {
+mongoose.connect(`mongodb+srv://${dbuser}:${dbpass}@cluster0.yfh1wjc.mongodb.net/merncafe?retryWrites=true&w=majority&appName=Cluster0`).then(() => {
   app.listen(8083, () => {
     console.log("Server started");
   });
